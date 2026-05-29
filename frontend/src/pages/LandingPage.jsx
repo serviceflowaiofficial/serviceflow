@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle, Zap, Clock, DollarSign, TrendingUp, Menu, X, Play } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Clock, DollarSign, TrendingUp, Play } from 'lucide-react';
 
 export default function LandingPage() {
   const [animateStats, setAnimateStats] = useState(false);
