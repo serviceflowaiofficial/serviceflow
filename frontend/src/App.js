@@ -5,7 +5,6 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 
 function App() {
   const [page, setPage] = useState('landing');
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem('apiToken');
@@ -14,13 +13,11 @@ function App() {
     }
   }, []);
 
-  const handleLogin = (userData) => {
-    setUser(userData);
+  const handleLogin = () => {
     setPage('admin');
   };
 
   const handleLogout = () => {
-    setUser(null);
     setPage('landing');
   };
 
@@ -29,10 +26,10 @@ function App() {
       {page === 'landing' && (
         <div>
           <LandingPage />
-          <div className="text-center py-4 bg-slate-900 text-slate-400">
+          <div className="text-center py-4 bg-slate-900 border-t border-slate-800">
             <button
               onClick={() => setPage('login')}
-              className="text-blue-400 hover:underline"
+              className="text-blue-400 hover:text-blue-300 font-semibold"
             >
               Admin Login
             </button>
