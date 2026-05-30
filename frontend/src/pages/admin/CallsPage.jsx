@@ -10,7 +10,7 @@ export default function CallsPage() {
 
   const loadCalls = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/calls');
+      const response = await fetch('https://serviceflow-api-cba952ea54b7.herokuapp.com/api/calls');
       const data = await response.json();
       setCalls(data);
     } catch (error) {

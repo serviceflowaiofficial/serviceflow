@@ -10,7 +10,7 @@ export default function LeadsPage() {
 
   const loadLeads = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/leads');
+      const response = await fetch('https://serviceflow-api-cba952ea54b7.herokuapp.com/api/leads');
       const data = await response.json();
       setLeads(data);
     } catch (error) {

@@ -10,7 +10,7 @@ export default function AppointmentsPage() {
 
   const loadAppointments = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/appointments');
+      const response = await fetch('https://serviceflow-api-cba952ea54b7.herokuapp.com/api/appointments');
       const data = await response.json();
       setAppointments(data);
     } catch (error) {
