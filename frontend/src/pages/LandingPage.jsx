@@ -26,9 +26,13 @@ export default function LandingPage() {
               <span className="text-xl font-bold">ServiceFlow</span>
             </div>
             <div className="flex gap-4">
-              <button className="px-6 py-2 border border-blue-400 rounded-lg text-blue-400 hover:bg-blue-400/10">Sign In</button>
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold">Start Free Trial</button>
-            </div>
+  <button className="px-6 py-2 border border-blue-400 rounded-lg 
+text-blue-400 hover:bg-blue-400/10">Sign In</button>
+  <button className="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg 
+font-semibold">Get Estimate</button>
+  <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 
+rounded-lg font-semibold">Start Free Trial</button>
+</div>
           </div>
         </div>
       </nav>
