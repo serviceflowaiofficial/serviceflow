@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/admin/LoginPage';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import BookingPage from './pages/BookingPage';
 
 function App() {
   const [page, setPage] = useState('landing');
@@ -38,6 +39,7 @@ function App() {
       )}
       {page === 'login' && <LoginPage onLogin={handleLogin} />}
       {page === 'admin' && <AdminDashboard onLogout={handleLogout} />}
+{page === 'book' && <BookingPage />}
     </>
   );
 }
