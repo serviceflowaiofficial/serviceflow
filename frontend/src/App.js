@@ -17,7 +17,7 @@ function App() {
     <>
       {page === 'landing' && (
         <div>
-          <LandingPage />
+          <LandingPage onSignIn={() => setPage('login')} />
           <div className="text-center py-4 bg-slate-900 border-t border-slate-800">
             <button onClick={() => setPage('login')} className="text-blue-400 hover:text-blue-300 font-semibold">
               Admin Login

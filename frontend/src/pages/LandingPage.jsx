@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LandingPage() {
+export default function LandingPage({ onSignIn }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <nav className="bg-slate-800/50 backdrop-blur p-6 border-b border-blue-500/20">
@@ -9,7 +9,7 @@ export default function LandingPage() {
           <div className="flex gap-4">
             <button className="text-slate-300 hover:text-white">Features</button>
             <button className="text-slate-300 hover:text-white">Pricing</button>
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded font-semibold">Sign In</button>
+            <button onClick={onSignIn} className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded font-semibold">Sign In</button>
           </div>
         </div>
       </nav>
@@ -17,7 +17,7 @@ export default function LandingPage() {
       <section className="max-w-7xl mx-auto px-6 py-24 text-center">
         <h2 className="text-5xl font-bold mb-6">AI Customer Service for Trade Businesses</h2>
         <p className="text-xl text-slate-300 mb-8">Automate appointment booking, estimate requests, and customer callbacks. Let AI handle the phone.</p>
-        <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded text-lg font-bold">Start Free Trial</button>
+        <button onClick={onSignIn} className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded text-lg font-bold">Start Free Trial</button>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16">
@@ -53,7 +53,7 @@ export default function LandingPage() {
               <li>✓ Appointment booking</li>
               <li>✓ Basic reporting</li>
             </ul>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-semibold">Get Started</button>
+            <button onClick={onSignIn} className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-semibold">Get Started</button>
           </div>
           <div className="bg-slate-800 border border-blue-500/20 p-8 rounded-lg border-green-500/50">
             <h4 className="text-2xl font-bold mb-4">Growth</h4>
@@ -64,7 +64,7 @@ export default function LandingPage() {
               <li>✓ Estimates + booking</li>
               <li>✓ Advanced analytics</li>
             </ul>
-            <button className="w-full bg-green-600 hover:bg-green-700 py-2 rounded font-semibold">Popular</button>
+            <button onClick={onSignIn} className="w-full bg-green-600 hover:bg-green-700 py-2 rounded font-semibold">Popular</button>
           </div>
           <div className="bg-slate-800 border border-blue-500/20 p-8 rounded-lg">
             <h4 className="text-2xl font-bold mb-4">Enterprise</h4>
@@ -75,7 +75,7 @@ export default function LandingPage() {
               <li>✓ Custom AI training</li>
               <li>✓ Dedicated support</li>
             </ul>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-semibold">Contact</button>
+            <button onClick={onSignIn} className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-semibold">Contact</button>
           </div>
         </div>
       </section>
