@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BookingPage from '../BookingPage';
 import CallsPage from './CallsPage';
 import LeadsPage from './LeadsPage';
 import AppointmentsPage from './AppointmentsPage';
@@ -20,6 +21,7 @@ export default function AdminDashboard({ onLogout }) {
       <div className="max-w-7xl mx-auto p-8">
         <div className="flex gap-4 mb-8 border-b border-slate-700">
           <button onClick={() => setActiveTab('dashboard')} className={`px-4 py-2 font-semibold ${activeTab === 'dashboard' ? 'border-b-2 border-blue-500 text-blue-400' : 'text-slate-400'}`}>Dashboard</button>
+          <button onClick={() => setActiveTab('book')} className={`px-4 py-2 font-semibold ${activeTab === 'book' ? 'border-b-2 border-blue-500 text-blue-400' : 'text-slate-400'}`}>Book Appointment</button>
           <button onClick={() => setActiveTab('calls')} className={`px-4 py-2 font-semibold ${activeTab === 'calls' ? 'border-b-2 border-blue-500 text-blue-400' : 'text-slate-400'}`}>Calls</button>
           <button onClick={() => setActiveTab('leads')} className={`px-4 py-2 font-semibold ${activeTab === 'leads' ? 'border-b-2 border-blue-500 text-blue-400' : 'text-slate-400'}`}>Leads</button>
           <button onClick={() => setActiveTab('appointments')} className={`px-4 py-2 font-semibold ${activeTab === 'appointments' ? 'border-b-2 border-blue-500 text-blue-400' : 'text-slate-400'}`}>Appointments</button>
@@ -46,6 +48,7 @@ export default function AdminDashboard({ onLogout }) {
           </div>
         )}
 
+        {activeTab === 'book' && <BookingPage />}
         {activeTab === 'calls' && <CallsPage />}
         {activeTab === 'leads' && <LeadsPage />}
         {activeTab === 'appointments' && <AppointmentsPage />}
