@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import React, { useState } from 'react';
 
 export default function BookingPage() {
-  const [searchParams] = useSearchParams();
-  const [form, setForm] = useState({ name: '', phone: searchParams.get('phone') || '', date: '', time: '' });
+  const [form, setForm] = useState({ name: '', phone: '', date: '', time: '' });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -17,7 +15,7 @@ export default function BookingPage() {
         body: JSON.stringify(form)
       });
       const data = await response.json();
-      setMessage('Appointment booked! Check your email and text for confirmation.');
+      setMessage('Appointment booked! Check your email for confirmation.');
       setForm({ name: '', phone: '', date: '', time: '' });
     } catch (error) {
       setMessage('Error booking appointment. Please try again.');
