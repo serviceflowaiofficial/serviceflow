@@ -15,16 +15,7 @@ function App() {
 
   return (
     <>
-      {page === 'landing' && (
-        <div>
-          <LandingPage onSignIn={() => setPage('login')} />
-          <div className="text-center py-4 bg-slate-900 border-t border-slate-800">
-            <button onClick={() => setPage('login')} className="text-blue-400 hover:text-blue-300 font-semibold">
-              Admin Login
-            </button>
-          </div>
-        </div>
-      )}
+      {page === 'landing' && <LandingPage onSignIn={() => setPage('login')} />}
       {page === 'login' && <LoginPage onLogin={() => setPage('admin')} />}
       {page === 'admin' && <AdminDashboard onLogout={() => setPage('landing')} />}
     </>
