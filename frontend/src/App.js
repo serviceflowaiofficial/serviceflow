@@ -10,15 +10,15 @@ function App() {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
+  if (window.location.pathname.includes('/book')) {
+    setPage('book');
+  } else {
     const token = localStorage.getItem('apiToken');
     if (token) {
       setPage('admin');
     }
-    
-    if (window.location.pathname === '/book') {
-      setPage('book');
-    }
-  }, []);
+  }
+}, []);
 
   const handleLogin = () => {
     setPage('admin');
