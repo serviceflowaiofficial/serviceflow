@@ -9,12 +9,11 @@ export default function BookingPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('https://serviceflow-api-cba952ea54b7.herokuapp.com/api/appointment/create', {
+      await fetch('https://serviceflow-api-cba952ea54b7.herokuapp.com/api/appointment/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
       });
-      const data = await response.json();
       setMessage('Appointment booked! Check your email for confirmation.');
       setForm({ name: '', phone: '', date: '', time: '' });
     } catch (error) {
